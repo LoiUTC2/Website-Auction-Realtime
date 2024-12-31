@@ -1,0 +1,22 @@
+.app {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .dashboard {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .pending-auctions,
+  .active-auction-rooms {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  .completed-section {
+    margin-top: 20px;
+  }
+  

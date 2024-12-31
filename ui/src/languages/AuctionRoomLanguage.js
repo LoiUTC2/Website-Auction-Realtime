@@ -1,0 +1,38 @@
+const AuctionRoomLanguage = {
+    en: {
+        countdownTitle: 'Remaining Time',
+        auctioneer: 'Auctioneer',
+        bidHistory: 'Bid History',
+        currentBid: 'Current Price',
+        bidStep: 'Bid Step',
+        totalBidAmount: 'Total Bid Amount',
+        placeBid: 'Place Bid',
+        timeLeft: 'Time Left',
+        noAuctioneer: 'N/A',
+        biddingControls: 'Bidding Controls',
+        bidHistory: 'Bidding History',
+        justBid: 'just bid',
+        hour: 'Hour',
+        minute: 'Minute',
+        second: 'Second',
+        day: 'Day',
+    },
+    vi: {
+        countdownTitle: 'THỜI GIAN CÒN LẠI',
+        auctioneer: 'Đấu giá viên',
+        bidHistory: 'Diễn biến cuộc đấu giá',
+        currentBid: 'Giá hiện tại',
+        bidStep: 'Bước giá',
+        totalBidAmount: 'Tổng số tiền đấu giá',
+        placeBid: 'Trả giá',
+        timeLeft: 'Thời gian còn lại',
+        noAuctioneer: 'Chưa có',
+        justBid: 'vừa trả giá',
+        hour: 'Giờ',
+        minute: 'Phút',
+        second: 'Giây',
+        day: 'Ngày',
+    },
+};
+
+export { AuctionRoomLanguage };

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Báo Sản Phẩm Đấu Giá Thành Công</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .product-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Thông Báo Sản Phẩm Đấu Giá Thành Công</h2>
+    </div>
+
+    <div class="content">
+        <p>Kính gửi <strong><%= productOwner.fullName %></strong>,</p>
+
+        <p>Chúng tôi xin thông báo rằng sản phẩm của bạn <strong><%= product.name %></strong> đã <strong>được đấu giá thành công</strong> với giá <strong><%= winningPrice %> VND</strong>.</p>
+
+        <p>Vui lòng kiểm tra <strong>lịch sử gửi tài sản đấu giá</strong> của bạn để theo dõi các thông tin chi tiết về phiên đấu giá này.</p>
+
+        <h3><%= product.name %></h3>
+        <img src="<%= product.image %>" alt="<%= product.name %>" class="product-image">
+
+        <p>Trân trọng,<br>Đội ngũ của bạn</p>
+    </div>
+
+    <div class="footer">
+        <p>© <%= new Date().getFullYear() %> AUCTION SYSTEM. Tất cả các quyền được bảo lưu.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Báo Trúng Đấu Giá</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .product-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Thông Báo Trúng Đấu Giá</h2>
+    </div>
+
+    <div class="content">
+        <p>Kính gửi <strong><%= winningCustomer.fullName %></strong>,</p>
+
+        <p>Chúng tôi rất vui mừng thông báo rằng bạn đã <strong>trúng đấu giá</strong> thành công sản phẩm sau đây:</p>
+
+        <h3><%= product.name %></h3>
+        <img src="<%= product.image %>" alt="<%= product.name %>" class="product-image">
+
+        <p><strong>Thông tin phiên đấu giá:</strong></p>
+        <ul>
+            <li><strong>ID phiên đấu giá:</strong> <%= product._id %></li>
+            <li><strong>Thời gian phiên đấu giá:</strong> <%= new Date(startTime).toLocaleString('vi-VN') %> đến <%= new Date(endTime).toLocaleString('vi-VN') %></li>
+        </ul>
+
+        <p><strong>Giá trúng đấu giá:</strong> <%= winningPrice %> VND</p>
+
+        <p>Để xác nhận thanh toán và nhận sản phẩm, vui lòng nhấp vào liên kết dưới đây trong vòng <strong><%= expiryTime %></strong>:</p>
+        <p><a href="<%= confirmUrl %>" class="button">Xác Nhận Thanh Toán</a></p>
+
+        <p>Lưu ý: Sau <strong><%= expiryTime %></strong>, bạn sẽ không thể truy cập liên kết này nữa.</p>
+
+        <p>Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi.</p>
+
+        <p>Trân trọng,<br>Đội ngũ của bạn</p>
+    </div>
+
+    <div class="footer">
+        <p>© <%= new Date().getFullYear() %> AUCTION SYSTEM. Tất cả các quyền được bảo lưu.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+// If you want to override variables do it here
+@import "variables";
+
+$enable-ltr: true;
+$enable-rtl: true;
+
+// Import CoreUI for React components library
+@import "@coreui/coreui/scss/coreui";
+
+// Import Chart.js custom tooltips styles
+@import "@coreui/chartjs/scss/coreui-chartjs";
+
+@import "layout";
+@import "example";
+
+// If you want to add custom CSS you can put it here.
+@import "custom";
+ .modal-dialog {
+    transform: none;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+.bg-container{
+    background-color: #fff7f7;
+    padding: 20px 30px;
+    border-radius: 11px;
+
+}
+.input-readonly{
+    background-color: #f9e3e3;
+    pointer-events: none;
+    cursor: not-allowed;
+    // 
+}
+.button-table{
+    width: auto;
+    margin: auto;
+    height: 32px !important;
+    align-items: center;
+    display: flex;
+}
+.ant-picker-dropdown{
+    z-index: 100;
+}
